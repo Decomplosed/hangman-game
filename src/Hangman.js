@@ -66,8 +66,7 @@ class Hangman extends Component {
         <p>Guessed Wrong: {this.state.nWrong}</p>
         <p className='Hangman-word'>{this.guessedWord()}</p>
         <p className='Hangman-btns'>
-          {this.state.nWrong < this.props.maxWrong
-            ? this.generateButtons()
+          {!gameOver ? this.generateButtons()
             : `You lose: ${this.state.answer}`}
           {this.generateButtons()}
         </p>

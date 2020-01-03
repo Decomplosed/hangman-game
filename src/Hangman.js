@@ -83,7 +83,6 @@ class Hangman extends Component {
           {!gameOver ? this.guessedWord() : this.state.answer}
         </p>
         <p className='Hangman-btns'>{gameState}</p>
-        {this.guessedWord().join('') === this.state.answer && <p>You won!</p>}
         <button id="reset" onClick={this.reset}>
           Restart?
         </button>

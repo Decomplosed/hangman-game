@@ -80,6 +80,7 @@ class Hangman extends Component {
           {!gameOver ? this.generateButtons()
             : `You lose: ${this.state.answer}`}
         </p>
+        {this.guessedWord().join('') === this.state.answer && <p>You won!</p>}
         <button id="reset" onClick={this.reset}>
           Restart?
         </button>

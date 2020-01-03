@@ -24,7 +24,11 @@ class Hangman extends Component {
   }
 
   reset() {
-
+    this.setState({
+      nWrong: 0,
+      guessed: new Set(),
+      answer: randomWord()
+    })
   }
 
   /** guessedWord: show current-state of word:
